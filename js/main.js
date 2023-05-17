@@ -20,7 +20,19 @@ form.addEventListener('submit', function(event) {
     relacionamento
   };
 
-  console.log(cliente);
+  fetch('http:localhost:3000/user',{
+	method: 'POST',
+	headers:{
+		'Content-Type': 'application/json',
+		'Access-Control-Allow-Origin': '*'
+	},
+	body: JSON.stringify(cliente),
+  }).then(response=> response.json())
+  	.then(responseData=>{
+		console.log(responseData);
+	}).catch(error => {
+		console.log(error)
+	})
 });
 
 

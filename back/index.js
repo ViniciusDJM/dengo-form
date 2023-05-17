@@ -1,8 +1,10 @@
 const express = require('express');
 const mariadb = require('mariadb');
+const cors = require('cors')
 
 const app = express(), bodyParser = require('body-parser');
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(cors())
 port = 3000;
 
 
@@ -29,12 +31,14 @@ async function createDatabase(){
 
 }
 
-app.get('/', (req, res) => res.send("Hello"))
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')))
 
 
-//Decidir como passar o objeto
 app.post('/user', async (req, res) => {
-    const result = creatUser()
+    res.setHeader("Access-Control-Allow-Origin", "*")
+    let client = req.body
+    console.log(client.nome, client.sobrenome, client.email, client.telefone,  client.eventos, client.relacionamento, client.dataNascimento)
+    createUser(client.nome, client.sobrenome, client.email, client.telefone,  client.eventos.toString(), client.relacionamento, client.dataNascimento)
 })
 
 async function createUser(name, surename, email, cellphone, eventos, relacionamentos, dataNascimento){
@@ -42,14 +46,13 @@ async function createUser(name, surename, email, cellphone, eventos, relacioname
     try{
         conn = pool.getConnection();
         const row = (await conn)
-            .query("INSERT INTO user (name, surename, email, cellphone, dataNascimento, eventos, relacionamentos) VALUES (?, ?, ?, ?, ?, ?, ?)",
+            .query("INSERT INTO user (name, surename, email, cellphone, dataNacimento, eventos, relacionamentos) VALUES (?, ?, ?, ?, ?, ?, ?)",
             [name, surename, email, cellphone, dataNascimento, eventos, relacionamentos]);
     }catch(err){
         throw err;
     }finally{
         if (await conn){
             (await conn).end;
-            return row;
         }
     }
 }
