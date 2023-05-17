@@ -28,14 +28,17 @@
   
 
   <div class="content">
+
+    <div class="logo-container">
+      <img src="images/dengo-logo.jpg" alt="Logo da empresa">
+    </div>
     
     <div class="container">
-
       
       <div class="row justify-content-center">
         <div class="col-md-10">
           
-          <div class="row align-items-center">
+          <div class="row align-items">
             <div class="col-lg-7 mb-5 mb-lg-0">
 
               <h2 class="mb-5">Descubra, Conecte, Ame. <br> Encontre seu Dengo.</h2>
@@ -43,39 +46,39 @@
               <form class="border-right pr-5 mb-5" method="post" id="contactForm" name="contactForm">
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <label for="dataNascimento">Primeiro Nome:</label>
+                    <label style="font-weight: bold;" for="dataNascimento">Primeiro Nome:</label>
                     <input type="text" class="form-control" name="nome" id="nome" placeholder="Primeiro nome">
                   </div>
                   <div class="col-md-6 form-group">
-                    <label for="dataNascimento">Sobrenome:</label>
+                    <label style="font-weight: bold;" for="dataNascimento">Sobrenome:</label>
                     <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <label for="dataNascimento">Email:</label>
+                    <label style="font-weight: bold;" for="email">Email:</label>
                     <input type="text" class="form-control" name="email" id="email" placeholder="Email">
                   </div>
                 </div>
                 
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <label for="dataNascimento">Data de nascimento:</label>
+                    <label style="font-weight: bold;" for="dataNascimento">Data de nascimento:</label>
                     <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" placeholder="Data de nascimento" required>
                   </div>
                 </div>
                 
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" class="form-control" id="telefone" name="telefone"  maxlength="15" oninput="formatarTelefone(this)" required>
+                    <label style="font-weight: bold;" for="telefone">Telefone:</label>
+                    <input type="tel" class="form-control" placeholder="Coloque seu telefone" id="telefone" name="telefone"  maxlength="15" oninput="formatarTelefone(this)" required>
                     <small>Formato: DDD + número (ex: 11 99999-9999)</small>
                   </div>
                 </div>
                 
                 <div class="row">
                   <div class="col-md-12">
-                    <label for="eventos">Qual tipo de evento você procura?</label>
+                    <label style="font-weight: bold;" class= "mb-3" for="eventos">Qual tipo de evento você procura?</label>
                     <div class="checkbox-list" id="eventos">
                       <div class="checkbox-item">
                         <input type="checkbox" id="checkbox1" name="evento" value="Balada">
@@ -103,7 +106,7 @@
                 
                 <div class="row">
                   <div class="col-md-12 form-group">
-                    <label for="tipoRelacionamento">Qual tipo de relacionamento você almeja?:</label><br>
+                    <label style="font-weight: bold;" class= "mb-3" for="tipoRelacionamento">Qual tipo de relacionamento você almeja?</label><br>
                     <div class="radio-list">
                       <div class="radio-item">
                         <input type="radio" id="algoSerio" name="tipoRelacionamento" value="algoSerio">
@@ -130,8 +133,8 @@
                 </div>
                 
                 <div class="row">
-                  <div class="col-md-12">
-                    <input type="submit" value="submit" class="btn btn-primary rounded-0 py-2 px-4">
+                  <div class="col-md-12 mt-4">
+                    <input type="submit" value="Cadastrar-se" class="btn btn-primary rounded-0 py-2 px-4">
                     <span class="submitting"></span>
                   </div>
                 </div>
@@ -144,6 +147,7 @@
 
             </div>
             <div class="col-lg-4 ml-auto">
+              <img class= "logo-container mb-5" style="height: 375px; width: 520px;" src="images/img1-dengo.jpg" alt="Descrição da imagem">
               <h3 class="mb-4">Quem nunca se sentiu sozinho em um evento ou festa?</h3>
               <p>Com o aplicativo Dengo, você nunca mais vai passar por isso. Baseado em eventos, o Dengo conecta pessoas que compartilham dos mesmos interesses e hobbies. Imagine encontrar alguém que ama a mesma banda que você, ou que adora praticar o mesmo esporte que você. Com o Dengo, isso é possível.</p>
               <p>O aplicativo é fácil de usar. Basta criar um perfil, escolher os eventos que deseja participar e pronto. O Dengo cuida do resto, mostrando pessoas que também estarão no evento e que combinam com o seu perfil. Com o Dengo, você tem a chance de conhecer pessoas incríveis e quem sabe, encontrar o amor da sua vida.</p>

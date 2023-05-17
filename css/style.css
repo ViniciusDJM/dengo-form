@@ -14,6 +14,20 @@ a {
   a, a:hover {
     text-decoration: none !important; }
 
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px; /* Ajuste a altura conforme necessário */
+      margin-top: -100px;
+    }
+    
+    .logo-container img {
+      max-height: 100%; 
+      max-width: 100%; 
+    }
+
+
 .content {
   padding: 7rem 0; }
   .checkbox-list {
